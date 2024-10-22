@@ -22,32 +22,30 @@ function App() {
     setErrors(Validation(values))
   }
   return (
-    <div className="container">
-      <form onSubmit={handleValidation}>
+      <form className="container" onSubmit={handleValidation}>
         <h1>Registration Form</h1>
-        <div className='ui form'>
+        <div className='form'>
           <div className='field'>
-            <label>Username</label>
-            <input type='text' name='username' placeholder='username'   onChange={handleInput}/>
-            {erros.name && <p style={{color: 'red'}}>{erros.name}</p>}
+            <label>Name:</label>
+            <input type='text' name='username' placeholder='Enter Name'   onChange={handleInput}/>
+            {erros.name && <p style={{color: 'red', margin: 0}}>{erros.name}</p>}
           </div>
           
           <div className='field'>
-            <label>Email</label>
-            <input type='email' name='email' placeholder='Email' onChange={handleInput}/>
-            {erros.email && <p style={{color: 'red'}}>{erros.email}</p>}
+            <label>Email:</label>
+            <input type='email' name='email' placeholder='Enter Email' onChange={handleInput}/>
+            {erros.email && <p style={{color: 'red', margin: 0}}>{erros.email}</p>}
           </div>
 
           <div className='field'>
-            <label>Password</label>
-            <input type='password' name='password' placeholder='password' onChange={handleInput}/>
-            {erros.password && <p style={{color: 'red'}}>{erros.password}</p>}
+            <label>Password:</label>
+            <input type='password' name='password' placeholder='Enter Password' onChange={handleInput}/>
+            {erros.password && <p style={{color: 'red', margin: 0}}>{erros.password}</p>}
           </div>
 
             <button>Submit</button>
         </div>
       </form>
-    </div>
   );
 }
 

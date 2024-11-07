@@ -8,7 +8,6 @@ export default function Validation(values) {
 
     //Errors if no name is passed
     if (values.username === '') {
-        console.log(values.name)
         errors.name = "Name is Required!"
     }
 
